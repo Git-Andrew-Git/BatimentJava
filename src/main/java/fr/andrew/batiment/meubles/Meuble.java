@@ -1,4 +1,4 @@
-package fr.andrew.batiment;
+package fr.andrew.batiment.meubles;
 
 public class Meuble {
     private int largeur;
@@ -16,7 +16,7 @@ public class Meuble {
         return result;
     }
 
-    public void affiche() {
+    public void afficher() {
         System.out.printf("Meuble: %s\n\nLe volume d’encombrement du meuble: %d m\u00B3\nLa surface maximale prise par le meuble: %d m\u00B2\n\n\n", getNom(), voulume(), surface());
     }
 
