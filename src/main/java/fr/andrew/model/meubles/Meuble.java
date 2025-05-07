@@ -1,4 +1,4 @@
-package fr.andrew.batiment.meubles;
+package fr.andrew.model.meubles;
 
 public class Meuble {
     private int largeur;
@@ -6,19 +6,6 @@ public class Meuble {
     private int profondeur;
     private String nom;
 
-    public long voulume(){
-        long result = getLargeur() * getHauteur() * getProfondeur();
-        return result;
-    }
-
-    public long surface() {
-        long result = getLargeur() * getProfondeur();
-        return result;
-    }
-
-    public void afficher() {
-        System.out.printf("Meuble: %s\n\nLe volume d’encombrement du meuble: %d m\u00B3\nLa surface maximale prise par le meuble: %d m\u00B2\n\n\n", getNom(), voulume(), surface());
-    }
 
     public Meuble(int largeur, int hauteur, int profondeur, String nom) {
         setLargeur(largeur);
@@ -67,5 +54,18 @@ public class Meuble {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+    public long voulume(){
+        long result = getLargeur() * getHauteur() * getProfondeur();
+        return result;
+    }
+
+    public long surface() {
+        long result = getLargeur() * getProfondeur();
+        return result;
+    }
+
+    public void afficher() {
+        System.out.printf("Meuble: %s\n\nLe volume d’encombrement du meuble: %d m\u00B3\nLa surface maximale prise par le meuble: %d m\u00B2\n\n\n", getNom(), voulume(), surface());
     }
 }

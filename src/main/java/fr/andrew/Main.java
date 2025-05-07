@@ -1,7 +1,7 @@
 package fr.andrew;
 
-import fr.andrew.batiment.Batiment;
-import fr.andrew.batiment.meubles.Meuble;
+import fr.andrew.model.Batiment;
+import fr.andrew.model.meubles.Meuble;
 
 public class Main {
     // TODO
