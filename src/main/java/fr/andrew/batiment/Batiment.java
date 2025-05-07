@@ -3,6 +3,8 @@ package fr.andrew.batiment;
 import java.util.ArrayList;
 
 public class Batiment {
+    // ✅ checked
+    // Bonne gestion de la composition
     private String adresseBatiment;
     private final int nbPiecesMaxi = 7;
     private ArrayList<Piece> pieces = new ArrayList<>(nbPiecesMaxi);
@@ -18,12 +20,12 @@ public class Batiment {
     }
 
     public void afficher() {
-            System.out.printf("Batiment avec adresse : %s\n\n", getAdresseBatiment());
-            System.out.printf("Quantité des pièces actuelle : %d\n", getNbPieces());
-            System.out.printf("Quantité des pièces maximale : %d\n", getNbPiecesMaxi());
-            System.out.printf("Quantité des pièces libres : %d\n\n", piecesLibre());
+        System.out.printf("Batiment avec adresse : %s\n\n", getAdresseBatiment());
+        System.out.printf("Quantité des pièces actuelle : %d\n", getNbPieces());
+        System.out.printf("Quantité des pièces maximale : %d\n", getNbPiecesMaxi());
+        System.out.printf("Quantité des pièces libres : %d\n\n", piecesLibre());
         for (int j = 0; j < getPieces().size(); j++) {
-           getPieces().get(j).afficher();
+            getPieces().get(j).afficher();
         }
     }
 
@@ -33,7 +35,7 @@ public class Batiment {
                 throw new IllegalArgumentException("numero des pieces permit est depassé");
             } else {
                 pieces.add(new Piece(largeur, hauteur, profondeur, nom));
-                setNbPieces(getNbPieces()+1);
+                setNbPieces(getNbPieces() + 1);
 
             }
         } catch (IllegalArgumentException e) {
@@ -43,7 +45,6 @@ public class Batiment {
             System.out.printf("Maximum possible : %d\n", getNbPiecesMaxi());
         }
     }
-
 
     public Batiment(String adresseBatiment) {
         setAdresseBatiment(adresseBatiment);

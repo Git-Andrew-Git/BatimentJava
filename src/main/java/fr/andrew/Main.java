@@ -4,6 +4,14 @@ import fr.andrew.batiment.Batiment;
 import fr.andrew.batiment.meubles.Meuble;
 
 public class Main {
+    // TODO
+    // Au niveau de la structure des dossiers, il vaut mieux des nom de dossiers
+    // génériques comme "model"
+    // Agencer les méthodes, les attributs, les getters et setters, constructeur en
+    // les regroupant par types dans les classes et en gardant toujours la même
+    // configuration
+    // ✅ checked
+    // Bonne gestion de l'agrégation
     public static void main(String[] args) {
         // Créer le bâtiment
         Batiment monBatiment = new Batiment("10 Rue des Programmateurs, Paris");
@@ -22,7 +30,6 @@ public class Main {
         monBatiment.getPieces().get(2).ajouterMeubles(tableBasse);
 
         monBatiment.afficher();
-
 
     }
 }
